@@ -1,14 +1,55 @@
 import animationCharCome from "@/lib/utils/animationCharCome";
 import animationWordCome from "@/lib/utils/animationWordCome";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import axios from "axios";
 
 const Contact1 = () => {
+  const [address, setAddress] = useState({});
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
   const charAnim = useRef();
   const wordAnim = useRef();
   useEffect(() => {
     animationCharCome(charAnim.current);
     animationWordCome(wordAnim.current);
   }, []);
+  useEffect(() => {
+    GetData();
+  }, []);
+  function GetData() {
+    axios
+      .get(process.env.NEXT_PUBLIC_API_URL + "/api/addresses")
+      .then((res) => {
+        console.log("res", res?.data?.data[0]?.attributes);
+        setAddress(res?.data?.data[0]?.attributes);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    axios
+      .post(process.env.NEXT_PUBLIC_API_URL + "/api/forms", {
+        data: {
+          Name: name,
+          phone: phone,
+          email: email,
+          subject: subject,
+          message: message,
+        },
+      })
+      .then((res) => {
+        console.log("response", res);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
   return (
     <>
       <section className="contact__area-6">
@@ -37,28 +78,35 @@ const Contact1 = () => {
               <div className="contact__info">
                 <h3
                   className="sub-title-anim-top animation__word_come"
-                  ref={wordAnim}
-                >
+                  ref={wordAnim}>
                   {"Don't be afraid man ! "}
                   <br />
                   say hello
                 </h3>
                 <ul>
-                <li>
-                    <a href="tel:+(2)578365379">+(1) 510 470-6555</a>
-                  </li>
+                  {address?.number ? (
+                    <>
+                      {address?.number.split(",")?.map((v, k) => {
+                        return (
+                          <li>
+                            <a href="tel:+(2)578365379">{v}</a>
+                          </li>
+                        );
+                      })}
+                    </>
+                  ) : null}
+
                   <li>
-                    <a href="tel:+(2)578365379">+(92) 42 3789-6887</a>
-                  </li>
-                  <li>
-                    <a href="tel:+(2)578365379">+(92) 310-333-3402</a>
-                  </li>
-                  <li>
-                    <a href="mailto:info@theneosolutions.com">info@theneosolutions.com</a>
+                    <a href="mailto:info@theneosolutions.com">
+                      {address?.email}
+                    </a>
                   </li>
                   <li>
                     <span>
-                    Office No. 209, 2nd Floor, <br />GulMohar Trade Centre   <br /> Gulberg 2 Main Market, (Lahore)
+                      {address.address}
+                      {/* Office No. 209, 2nd Floor, <br />
+                      GulMohar Trade Centre <br /> Gulberg 2 Main Market,
+                      (Lahore) */}
                     </span>
                   </li>
                 </ul>
@@ -66,24 +114,47 @@ const Contact1 = () => {
             </div>
             <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
               <div className="contact__form">
-                <form action="assets/mail.php" method="POST">
+                <form onSubmit={handleSubmit}>
                   <div className="row g-3">
                     <div className="col-xxl-6 col-xl-6 col-12">
-                      <input type="text" name="name" placeholder="Name *" />
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Name *"
+                        required
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                      />
                     </div>
                     <div className="col-xxl-6 col-xl-6 col-12">
-                      <input type="email" name="email" placeholder="Email *" />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email *"
+                        required
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
                     </div>
                   </div>
                   <div className="row g-3">
                     <div className="col-xxl-6 col-xl-6 col-12">
-                      <input type="tel" name="phone" placeholder="Phone" />
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone"
+                        value={phone}
+                        onChange={(e) => setPhone(e.target.value)}
+                      />
                     </div>
                     <div className="col-xxl-6 col-xl-6 col-12">
                       <input
                         type="text"
                         name="subject"
                         placeholder="Subject *"
+                        required
+                        value={subject}
+                        onChange={(e) => setSubject(e.target.value)}
                       />
                     </div>
                   </div>
@@ -92,13 +163,17 @@ const Contact1 = () => {
                       <textarea
                         name="message"
                         placeholder="Messages *"
-                      ></textarea>
+                        required
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}></textarea>
                     </div>
                   </div>
                   <div className="row g-3">
                     <div className="col-12">
                       <div className="btn_wrapper">
-                        <button className="wc-btn-primary btn-hover btn-item">
+                        <button
+                          className="wc-btn-primary btn-hover btn-item"
+                          type="submit">
                           <span></span> Send <br />
                           Messages <i className="fa-solid fa-arrow-right"></i>
                         </button>

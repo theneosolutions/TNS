@@ -252,88 +252,88 @@
       "sub_nav": [
         {
           "name": "Development",
-          "link": "",
+          "link": "/service-details?search=mobile-app",
           "sub_dropdown_nav": [
             {
               "name": "Mobile App",
-              "link": ""
+              "link": "/service-details?search=mobile-app"
             },
             {
               "name": "Web App",
-              "link": ""
+              "link": "/service-details?search=web-app"
             },
             {
               "name": "SAAS",
-              "link": ""
+              "link": "/service-details?search=saas"
             },
             {
               "name": "Software",
-              "link": ""
+              "link": "/service-details?search=software"
             },
             {
               "name": "MicroServices",
-              "link": ""
+              "link": "/service-details?search=microservices"
             }
           ]
         },
         {
           "name": "Cyber Security",
-          "link": "/service-details"
+          "link": "/service-details?search=cyber-security"
         },       
         {
           "name": "DevOps",
-          "link": "/service-details"
+          "link": "/service-details?search=dev-ops"
         },
         {
           "name": "Marketing",
-          "link": "",
+          "link": "/service-details?search=marketing",
           "sub_dropdown_nav": [
             {
               "name": "Social Media Marketing",
-              "link": ""
+              "link": "/service-details?search=social-media-marketing"
             },
             {
               "name": "Search Engine Optimization",
-              "link": ""
+              "link": "/service-details?search=search-engine-optimization"
             },
             {
               "name": "Search Engine Marketing",
-              "link": ""
+              "link": "/service-details?search=search-engine-marketing"
             },
             {
               "name": "Content Marketing",
-              "link": ""
+              "link": "/service-details?search=content-marketing"
             },
             {
               "name": "Email Marketing",
-              "link": ""
+              "link": "/service-details?search=email-marketing"
             },
             {
               "name": "Interactive Content Marketing",
-              "link": ""
+              "link": "/service-details?search=interactive-content-marketing"
             },
             {
               "name": "Video Marketing",
-              "link": ""
+              "link": "/service-details?search=video-marketing"
             }
             
           ]
         },
         {
           "name": "Designing",
-          "link": "",
+          "link": "/service-details?search=graphic-designing",
           "sub_dropdown_nav": [
             {
               "name": "Graphic Design",
-              "link": ""
+              "link": "/service-details?search=graphic-designing"
             },
             {
               "name": "Video Design",
-              "link": ""
+              "link": "/service-details?search=video-design"
             },
             {
               "name": "UI/UX Design",
-              "link": ""
+              "link": "/service-details?search=ui-ux-design"
             }
           ]
         }

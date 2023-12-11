@@ -66,8 +66,7 @@ const DesignStudioAbout = () => {
                 <div className="sec-btn btn_wrapper">
                   <Link
                     className="wc-btn-pink btn-hover btn-item"
-                    href="/about"
-                  >
+                    href="/about">
                     <span></span> Explore Us{" "}
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>

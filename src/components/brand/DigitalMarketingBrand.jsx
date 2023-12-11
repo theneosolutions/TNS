@@ -1,18 +1,18 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
-import Brand1 from "../../../public/assets/imgs/brand/1.png";
-import Brand2 from "../../../public/assets/imgs/brand/2.png";
-import Brand3 from "../../../public/assets/imgs/brand/3.png";
-import Brand4 from "../../../public/assets/imgs/brand/4.png";
-import Brand5 from "../../../public/assets/imgs/brand/5.png";
-import Brand6 from "../../../public/assets/imgs/brand/6.png";
+
 import Image from "next/image";
+import axios from "axios";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const DigitalMarketingBrand = () => {
+  const URL = process.env.NEXT_PUBLIC_API_URL;
+  const [brandsData, setBrandsLogoData] = useState([]);
+
   useEffect(() => {
+    GetBrandLogo();
     if (typeof window !== "undefined") {
       let device_width = window.innerWidth;
       setTimeout(() => {
@@ -56,6 +56,25 @@ const DigitalMarketingBrand = () => {
       }, 100);
     }
   }, []);
+  function GetBrandLogo() {
+    axios
+      .get(URL + "/api/brands?populate=%2A")
+      .then((res) => {
+        console.log("brand logo", res?.data?.data);
+        setBrandsLogoData(res?.data?.data);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
+
+  const Logo = (url) => {
+    const imageUrl = url;
+
+    const src = imageUrl ? `${URL}${imageUrl}` : DummyLogo;
+
+    return <Image priority width={97} height={67} src={src} alt="Brand Logo" />;
+  };
   return (
     <>
       <section className="brand__area">
@@ -66,60 +85,13 @@ const DigitalMarketingBrand = () => {
                 We worked with global largest brands
               </h2>
               <div className="brand__list-3">
-                <div className="brand__item-2 fade_bottom">
-                  <Image
-                    priority
-                    width={97}
-                    height={67}
-                    src={Brand1}
-                    alt="Brand Logo"
-                  />
-                </div>
-                <div className="brand__item-2 fade_bottom">
-                  <Image
-                    priority
-                    width={85}
-                    height={67}
-                    src={Brand2}
-                    alt="Brand Logo"
-                  />
-                </div>
-                <div className="brand__item-2 fade_bottom">
-                  <Image
-                    priority
-                    width={114}
-                    height={64}
-                    src={Brand3}
-                    alt="Brand Logo"
-                  />
-                </div>
-                <div className="brand__item-2 fade_bottom">
-                  <Image
-                    priority
-                    width={82}
-                    height={70}
-                    src={Brand4}
-                    alt="Brand Logo"
-                  />
-                </div>
-                <div className="brand__item-2 fade_bottom">
-                  <Image
-                    priority
-                    width={115}
-                    height={67}
-                    src={Brand5}
-                    alt="Brand Logo"
-                  />
-                </div>
-                <div className="brand__item-2 fade_bottom">
-                  <Image
-                    priority
-                    width={121}
-                    height={63}
-                    src={Brand6}
-                    alt="Brand Logo"
-                  />
-                </div>
+                {brandsData?.map((v, k) => {
+                  return (
+                    <div className="brand__item-2 fade_bottom" key={k}>
+                      {Logo(v.attributes?.image?.data[0]?.attributes.url)}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </div>

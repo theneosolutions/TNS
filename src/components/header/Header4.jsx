@@ -43,9 +43,9 @@ export default function Header4({ navData }) {
           <header className="header__area-7" ref={headerArea}>
             <div className="header__inner-2">
               <LogoItem />
-              {navData.nav && navData.nav.length && (
+              {/* {navData.nav && navData.nav.length && (
                 <NavItem nav={navData.nav} navStyle={4} />
-              )}
+              )} */}
               <div className="header__nav-icon-7">
                 <button onClick={openCanvas} className="menu-icon-2">
                   <Image

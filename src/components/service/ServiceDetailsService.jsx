@@ -1,8 +1,11 @@
 import ServiceDetail from "../../../public/assets/imgs/thumb/service-detail.png";
 import Shape6 from "../../../public/assets/imgs/icon/shape-6.png";
 import Image from "next/image";
+import ThumbDe2v3 from "../../../public/assets/imgs/about/3/1.jpg";
 
-const ServiceDetailsService = () => {
+const ServiceDetailsService = ({ data }) => {
+  console.log("datadata", data?.data?.section3);
+
   return (
     <>
       <section className="service__detail">
@@ -12,8 +15,7 @@ const ServiceDetailsService = () => {
             <div className="col-xxl-12">
               <div className="sec-title-wrapper">
                 <h2 className="sec-title title-anim">
-                  We replace unreliable wirefreme and expensive agencies for one
-                  of the best organized layer.
+                  {data?.data?.section3?.heading}
                 </h2>
               </div>
             </div>
@@ -41,17 +43,8 @@ const ServiceDetailsService = () => {
                 />
               </div>
               <div className="service__detail-content">
-                <p>
-                  {
-                    "Receive your design within a few business days, and be updated on the process. Everything you need for a digitally driven brand. Defined proposition. Conceptual realisation. Logo, type, look, feel, tone, movement, content - we've got it covered."
-                  }
-                </p>
-                <p>
-                  Getting your brand message out there. We create dynamic
-                  campaign creative that engages audiences, wherever they are
-                  most talented. Bring your brand to life, communicate your
-                  value proposition with agile setup across creativity.
-                </p>
+                <p>{data?.data?.section3?.content1}</p>
+                <p>{data?.data?.section3?.content2}</p>
               </div>
             </div>
           </div>

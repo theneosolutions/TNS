@@ -108,16 +108,14 @@ export default function Header1({ navData }) {
                   className="search-icon"
                   onClick={openSearch}
                   id="search_icon"
-                  ref={searchIcon}
-                >
+                  ref={searchIcon}>
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <button
                   className="search-icon"
                   onClick={closeSearch}
                   id="search_close"
-                  ref={searchClose}
-                >
+                  ref={searchClose}>
                   <i className="fa-solid fa-xmark"></i>
                 </button>
                 <button onClick={openCanvas}>

@@ -1,29 +1,40 @@
 import Link from "next/link";
-import LogoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
-import LogoBlack from "../../../public/assets/imgs/logo/logo-black.png";
+import { useEffect, useState } from "react";
+
 import Image from "next/image";
+import axios from "axios";
+import DummyLogo from "../../../public/assets/imgs/logo-dummy.png";
+
+const URL = process.env.NEXT_PUBLIC_API_URL;
 
 export default function LogoItem() {
+  const [logoData, setLogoData] = useState({});
+  useEffect(() => {
+    GetLogo();
+  }, []);
+  function GetLogo() {
+    axios
+      .get(URL + "/api/main-logos?populate=%2A")
+      .then((res) => {
+        setLogoData(res?.data?.data[0]?.attributes);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
+  const Logo = () => {
+    const imageUrl = logoData?.image?.data[0]?.attributes?.url;
+
+    const src = imageUrl ? `${URL}${imageUrl}` : DummyLogo;
+
+    return <Image width={150} height={50} src={src} alt="Logo" />;
+  };
+
   return (
     <>
       <div className="header__logo-2">
         <Link href={"/digital-marketing"} className="logo-dark">
-          <Image
-            priority
-            width={136}
-            height={45}
-            src={LogoBlack}
-            alt="Site Logo"
-          />
-        </Link>
-        <Link href={"/digital-marketing"} className="logo-light">
-          <Image
-            priority
-            width={100}
-            height={33}
-            src={LogoWhite2}
-            alt="Site Logo"
-          />
+          <Logo />
         </Link>
       </div>
     </>

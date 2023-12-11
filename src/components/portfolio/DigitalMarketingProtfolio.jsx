@@ -47,8 +47,7 @@ const DigitalMarketingProtfolio = () => {
                   prevEl: ".pp-prev",
                   nextEl: ".pp-next",
                 }}
-                pagination={{ el: ".swiper-pagination", type: "fraction" }}
-              >
+                pagination={{ el: ".swiper-pagination", type: "fraction" }}>
                 <div className="swiper-wrapper">
                   <SwiperSlide>
                     <div className="portfolio__slide-3">

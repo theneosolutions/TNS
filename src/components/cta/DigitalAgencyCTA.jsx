@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const DigitalAgencyCTA = () => {
+const DigitalAgencyCTA = ({ data }) => {
   return (
     <>
       <section className="cta__area">
@@ -9,15 +9,14 @@ const DigitalAgencyCTA = () => {
           <div className="row">
             <div className="col-xxl-12">
               <div className="cta__content">
-                <p className="cta__sub-title">Work with us</p>
+                <p className="cta__sub-title">{data?.data?.section5?.text}</p>
                 <h2 className="cta__title title-anim">
-                  We would love to hear more about your project
+                  {data?.data?.section5?.heading}
                 </h2>
                 <div className="btn_wrapper">
                   <Link
                     href="/contact"
-                    className="wc-btn-primary btn-hover btn-item"
-                  >
+                    className="wc-btn-primary btn-hover btn-item">
                     <span></span>Let’s talk us{" "}
                     <i className="fa-solid fa-arrow-right"></i>
                   </Link>
