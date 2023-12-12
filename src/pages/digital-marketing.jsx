@@ -24,7 +24,7 @@ export default function DigitalMarketing() {
           <DigitalMarketingBrand />
           <DigitalMarketingAbout />
           <DigitalMarketingService />
-          {/* <DigitalMarketingProtfolio /> */}
+          <DigitalMarketingProtfolio />
           {/* <DigitalMarketingTestimonial /> */}
           <DigitalMarketingWorkflow />
           <DigitalMarketingPrice />
