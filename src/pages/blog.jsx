@@ -1,19 +1,19 @@
 import Head from "next/head";
 import RootLayout from "@/components/common/layout/RootLayout";
-import Blog1 from "@/components/blog/Blog1";
+import BlogElementV2 from "@/components/blog/BlogElementV2";
 import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
 
-const Blog = () => {
+const BlogV2 = () => {
   return (
     <>
       <Head>
-        <title>Blog</title>
-        <meta name="description" content="Blog Description" />
+        <title>Blog V2</title>
+        <meta name="description" content="Blog V2 Description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
         <RootLayout header="header3" footer="footer3">
-          <Blog1 />
+          <BlogElementV2 />
           <DigitalAgencyCTA />
         </RootLayout>
       </main>
@@ -21,4 +21,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default BlogV2;

@@ -1,10 +1,10 @@
 import { useRouter } from "next/router";
- import { useEffect } from "react";
+import { useEffect } from "react";
 
 const Index = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push("/digital-marketing");
+    router.push("/home");
   }, [router]);
   return <div></div>;
 };

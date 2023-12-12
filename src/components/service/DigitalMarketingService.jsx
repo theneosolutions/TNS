@@ -89,7 +89,6 @@ const DigitalMarketingService = () => {
         console.log("error", error);
       });
   }
-  console.log("data service", data);
   return (
     <>
       <section className="service__area-3 pb-150">

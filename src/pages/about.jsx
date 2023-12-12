@@ -21,9 +21,7 @@ const About = () => {
           <AboutHero />
           <AboutStory />
           <AboutCounter />
-          {/* <AboutTeam /> */}
           <DigitalAgencyBrand />
-          {/* <AboutTestimonial /> */}
           <DigitalAgencyCTA />
         </RootLayout>
       </main>
