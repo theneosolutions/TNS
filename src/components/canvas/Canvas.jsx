@@ -6,11 +6,19 @@ import logoWhite2 from "../../../public/assets/imgs/logo/site-logo-white-2.png";
 import Shape11 from "../../../public/assets/imgs/shape/11.png";
 import Shape12 from "../../../public/assets/imgs/shape/12.png";
 import Image from "next/image";
+import DummyLogo from "../../../public/assets/imgs/logo-dummy.png";
+
+import axios from "axios";
 
 const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
   const [accordion, setAccordion] = useState(0);
+  const [address, setAddress] = useState({});
   const [subAccordion, setSubAccordion] = useState(0);
+  const [links, setLinks] = useState([]);
+  const [footerLogo, setFooterLogo] = useState({});
   const headerTitle = useRef();
+  const URL = process.env.NEXT_PUBLIC_API_URL;
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       setTimeout(() => {
@@ -19,7 +27,6 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
           let firstParent = rootParent[i].children;
           for (let j = 0; j < firstParent.length; j++) {
             if (firstParent[j].className.includes("header_title")) {
-
               let arr = firstParent[j].children[0].textContent.split("");
               let spanData = "";
               for (let k = 0; k < arr.length; k++) {
@@ -51,6 +58,51 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
       header_bg.style.setProperty("mix-blend-mode", "exclusion");
     }
   };
+  useEffect(() => {
+    GetData();
+    GetDataSocail();
+    GetFooterLogo();
+  }, []);
+  function GetData() {
+    axios
+      .get(process.env.NEXT_PUBLIC_API_URL + "/api/addresses")
+      .then((res) => {
+        console.log("res", res?.data?.data[0]?.attributes);
+        setAddress(res?.data?.data[0]?.attributes);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
+  function GetDataSocail() {
+    axios
+      .get(process.env.NEXT_PUBLIC_API_URL + "/api/socails")
+      .then((res) => {
+        setLinks(res?.data?.data);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
+  function GetFooterLogo() {
+    axios
+      .get(process.env.NEXT_PUBLIC_API_URL + "/api/logos?populate=%2A")
+      .then((res) => {
+        setFooterLogo(res?.data?.data[0]?.attributes);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
+  }
+  const FooterLogo = () => {
+    const imageUrl = footerLogo?.image?.data[0]?.attributes?.url;
+    const src = imageUrl ? `${URL}${imageUrl}` : DummyLogo;
+
+    return (
+      <Image priority height={30} width={90} src={src} alt="Footer Logo" />
+    );
+  };
+
   return (
     <>
       <div className="offcanvas__area" ref={ofCanvasArea}>
@@ -58,53 +110,22 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
           <div className="offcanvas__left">
             <div className="offcanvas__logo">
               <Link href="/digital-marketing">
-                <Image
-                  priority
-                  style={{ width: "auto", height: "auto" }}
-                  src={logoWhite2}
-                  alt="Offcanvas Logo"
-                />
+                <FooterLogo />
               </Link>
             </div>
-            <div className="offcanvas__social">
+            <div className="offcanvas__social" style={{ marginTop: -80 }}>
               <h3 className="social-title">Follow Us</h3>
               <ul>
-                <li>
-                  <a href="#">Dribbble</a>
-                </li>
-                <li>
-                  <a href="#">Behance</a>
-                </li>
-                <li>
-                  <a href="#">Instagram</a>
-                </li>
-                <li>
-                  <a href="#">Facebook</a>
-                </li>
-                <li>
-                  <a href="#">Twitter</a>
-                </li>
-                <li>
-                  <a href="#">YouTube</a>
-                </li>
+                {links?.map((v, k) => {
+                  return (
+                    <li>
+                      <a href={v.attributes.link}>{v.attributes.name}</a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
-            <div className="offcanvas__links">
-              <ul>
-                <li>
-                  <Link href="/about">About</Link>
-                </li>
-                <li>
-                  <Link href="/contact">contact</Link>
-                </li>
-                <li>
-                  <Link href="/career">Career</Link>
-                </li>
-                <li>
-                  <Link href="/blog">blog</Link>
-                </li>
-              </ul>
-            </div>
+            <div className="offcanvas__links"></div>
           </div>
           <div className="offcanvas__mid">
             <div className="offcanvas__menu-wrapper">
@@ -112,82 +133,8 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                 <ul className="menu-anim title" ref={headerTitle}>
                   <li>
                     <div className="header_title">
-                      <Link href={"/digital-marketing"}>HOME</Link>
-                      <div className="accordian-btn">
-                        {accordion === 1 ? (
-                          <a onClick={() => openData(0)}>-</a>
-                        ) : (
-                          <a onClick={() => openData(1)}>+</a>
-                        )}
-                      </div>
+                      <Link href={"/home"}>HOME</Link>
                     </div>
-                    <ul
-                      className="sub_title"
-                      style={
-                        accordion === 1 ? { display: "" } : { display: "none" }
-                      }
-                    >
-                      <li>
-                        <Link href={"/digital-marketing"}>
-                          Digital Maketing
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/digital-marketing-dark"}>
-                          Digital Maketing dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/design-studio"}>Design Studio </Link>
-                      </li>
-                      <li>
-                        <Link href={"/design-studio-dark"}>
-                          Design Studio dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/digital-agency"}>Digital Agency</Link>
-                      </li>
-                      <li>
-                        <Link href={"/digital-agency-dark"}>
-                          Digital Agency dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/creative-agency"}>creative Agency</Link>
-                      </li>
-                      <li>
-                        <Link href={"/creative-agency"}>
-                          creative Agency dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/startup-agency"}>Startup Agency</Link>
-                      </li>
-                      <li>
-                        <Link href={"/startup-agency-dark"}>
-                          Startup Agency dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/modern-agency"}>modern agency</Link>
-                      </li>
-                      <li>
-                        <Link href={"/modern-agency-dark"}>
-                          modern agency dark
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/personal-portfolio"}>
-                          personal Portfolio
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/personal-portfolio-dark"}>
-                          personal Portfolio dark
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
                   <li>
                     <div className="header_title">
@@ -209,402 +156,21 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                       className="sub_title"
                       style={
                         accordion === 3 ? { display: "" } : { display: "none" }
-                      }
-                    >
-                      <li>
-                        <Link href={"/service"}>service</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-dark"}>service dark</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v2"}>service v2</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v2-dark"}>service v2 dark</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v3"}>service v3</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v3-dark"}>service v3 dark</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v4"}>service v4</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v4-dark"}>service v4 dark</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v5"}>service v5</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v5-dark"}>service v5 dark</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v6"}>service v6</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-v6-dark"}>service v6 dark</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-details"}>service details</Link>
-                      </li>
-                      <li>
-                        <Link href={"/service-details-dark"}>
-                          service details dark
-                        </Link>
-                      </li>
+                      }>
+                      {array.map((v, k) => {
+                        return (
+                          <li>
+                            <Link href={v.link}>{v.name}</Link>
+                          </li>
+                        );
+                      })}
                     </ul>
                   </li>
-                  <li>
-                    <div className="header_title d-flex">
-                      <Link href={"#"}>PAGES</Link>
-                      <div className="accordian-btn">
-                        {accordion === 4 ? (
-                          <a onClick={() => openData(0)}>-</a>
-                        ) : (
-                          <a onClick={() => openData(4)}>+</a>
-                        )}
-                      </div>
-                    </div>
-                    <ul
-                      className="sub_title"
-                      style={
-                        accordion === 4 ? { display: "" } : { display: "none" }
-                      }
-                    >
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"/service"}>Service</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.1 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.1)}>+</a>
-                            )}
-                          </div>
-                        </div>
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.1
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/service"}>service</Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-dark"}>service dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v2"}>service v2</Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v2-dark"}>
-                              service v2 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v3"}>service v3</Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v3-dark"}>
-                              service v3 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v4"}>service v4</Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v4-dark"}>
-                              service v4 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v5"}>service v5</Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v5-dark"}>
-                              service v5 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v6"}>service v6</Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-v6-dark"}>
-                              service v6 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-details"}>
-                              service details
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/service-details-dark"}>
-                              service details dark
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"/portfolio"}>Portfolio</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.2 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.2)}>+</a>
-                            )}
-                          </div>
-                        </div>
 
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.2
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/portfolio"}>portfolio</Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-dark"}>portfolio dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-v2"}>portfolio v2</Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-v2-dark"}>
-                              portfolio v2 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-v3"}>portfolio v3</Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-v3-dark"}>
-                              portfolio v3 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-v4"}>portfolio v4</Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-v4-dark"}>
-                              portfolio v4 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-v5"}>portfolio v5</Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-v5-dark"}>
-                              portfolio v5 dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-details"}>
-                              portfolio details
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/portfolio-details-dark"}>
-                              portfolio details dark
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"/team"}>team</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.3 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.3)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.3
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/team"}>Team</Link>
-                          </li>
-                          <li>
-                            <Link href={"/team-dark"}>Team dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/team-details"}>Team Details</Link>
-                          </li>
-                          <li>
-                            <Link href={"/team-details-dark"}>
-                              Team Details dark
-                            </Link>
-                          </li>
-                          <li>
-                            <Link href={"/career"}>career</Link>
-                          </li>
-                          <li>
-                            <Link href={"/career-dark"}>career dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/job-details"}>job details</Link>
-                          </li>
-                          <li>
-                            <Link href={"/job-details-dark"}>
-                              job details dark
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"/blog"}>blog</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.4 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.4)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.4
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/blog"}>blog</Link>
-                          </li>
-                          <li>
-                            <Link href={"/blog-dark"}>blog dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/blog-v2"}>blog V2</Link>
-                          </li>
-                          <li>
-                            <Link href={"/blog-v2-dark"}>blog v2 dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/category"}>category</Link>
-                          </li>
-                          <li>
-                            <Link href={"/category-dark"}>category dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/blog-details"}>blog details</Link>
-                          </li>
-                          <li>
-                            <Link href={"/blog-details"}>
-                              blog details dark
-                            </Link>
-                          </li>
-                        </ul>
-                      </li>
-                      <li className="sub_header_title">
-                        <div className="d-flex justify-content-between">
-                          <Link href={"#"}>Others</Link>
-                          <div className="sub-accordian-btn">
-                            {subAccordion === 4.5 ? (
-                              <a onClick={() => openSubData(4)}>-</a>
-                            ) : (
-                              <a onClick={() => openSubData(4.5)}>+</a>
-                            )}
-                          </div>
-                        </div>
-
-                        <ul
-                          className="sub_title_2"
-                          style={
-                            subAccordion === 4.5
-                              ? { display: "" }
-                              : { display: "none" }
-                          }
-                        >
-                          <li>
-                            <Link href={"/about"}>about</Link>
-                          </li>
-                          <li>
-                            <Link href={"/about-dark"}>about dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/faq"}>FAQs</Link>
-                          </li>
-                          <li>
-                            <Link href={"/faq-dark"}>FAQs dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/contact"}>contact</Link>
-                          </li>
-                          <li>
-                            <Link href={"/contact-dark"}>contact dark</Link>
-                          </li>
-                          <li>
-                            <Link href={"/error"}>404</Link>
-                          </li>
-                          <li>
-                            <Link href={"/error-dark"}>404 dark</Link>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
                   <li>
                     <div className="header_title">
                       <Link href={"/blog"}>BLOG</Link>
-                      <div className="accordian-btn">
-                        {accordion === 5 ? (
-                          <a onClick={() => openData(0)}>-</a>
-                        ) : (
-                          <a onClick={() => openData(5)}>+</a>
-                        )}
-                      </div>
                     </div>
-                    <ul
-                      className="sub_title"
-                      style={
-                        accordion === 5 ? { display: "" } : { display: "none" }
-                      }
-                    >
-                      <li>
-                        <Link href={"/blog"}>blog</Link>
-                      </li>
-                      <li>
-                        <Link href={"/blog-dark"}>blog dark</Link>
-                      </li>
-                      <li>
-                        <Link href={"/blog-v2"}>blog v2</Link>
-                      </li>
-                      <li>
-                        <Link href={"/blog-v2-dark"}>blog v2 dark</Link>
-                      </li>
-                      <li>
-                        <Link href={"/blog-details"}>blog details</Link>
-                      </li>
-                      <li>
-                        <Link href={"/blog-details-dark"}>
-                          blog details dark
-                        </Link>
-                      </li>
-                    </ul>
                   </li>
                   <li>
                     <div className="header_title">
@@ -624,32 +190,28 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                 </button>
               </form>
             </div>
-            <div className="offcanvas__contact">
+            <div className="offcanvas__contact " style={{ marginTop: -50 }}>
               <h3>Get in touch</h3>
               <ul>
+                {address?.number ? (
+                  <>
+                    {address?.number.split(",")?.map((v, k) => {
+                      return (
+                        <li>
+                          <a href="tel:+(2)578365379">{v}</a>
+                        </li>
+                      );
+                    })}
+                  </>
+                ) : null}
                 <li>
-                  <a href="tel:02094980547">+(02) - 094 980 547</a>
+                  <a href="mailto:info@theneosolutions.com">{address?.email}</a>
                 </li>
                 <li>
-                  <a href="mailto:info@extradesign.com">info@extradesign.com</a>
+                  <span>{address.address}</span>
                 </li>
-                <li>230 Norman Street New York, QC (USA) H8R 1A1</li>
               </ul>
             </div>
-            <Image
-              priority
-              style={{ width: "auto", height: "auto" }}
-              src={Shape11}
-              alt="shape"
-              className="shape-1"
-            />
-            <Image
-              priority
-              style={{ width: "auto", height: "auto" }}
-              src={Shape12}
-              alt="shape"
-              className="shape-2"
-            />
           </div>
           <div className="offcanvas__close">
             <button type="button" onClick={closeCanvas}>
@@ -663,3 +225,78 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
 };
 
 export default Canvas;
+
+const array = [
+  {
+    name: "Mobile App",
+    link: "/service-details?search=mobile-app",
+  },
+  {
+    name: "Web App",
+    link: "/service-details?search=web-app",
+  },
+  {
+    name: "SAAS",
+    link: "/service-details?search=saas",
+  },
+  {
+    name: "Software",
+    link: "/service-details?search=software",
+  },
+  {
+    name: "MicroServices",
+    link: "/service-details?search=microservices",
+  },
+  {
+    name: "Cyber Security",
+    link: "/service-details?search=cyber-security",
+  },
+  {
+    name: "DevOps",
+    link: "/service-details?search=dev-ops",
+  },
+  {
+    name: "Marketing",
+    link: "/service-details?search=marketing",
+  },
+  {
+    name: "Social Media Marketing",
+    link: "/service-details?search=social-media-marketing",
+  },
+  {
+    name: "Search Engine Optimization",
+    link: "/service-details?search=search-engine-optimization",
+  },
+  {
+    name: "Search Engine Marketing",
+    link: "/service-details?search=search-engine-marketing",
+  },
+  {
+    name: "Content Marketing",
+    link: "/service-details?search=content-marketing",
+  },
+  {
+    name: "Email Marketing",
+    link: "/service-details?search=email-marketing",
+  },
+  {
+    name: "Interactive Content Marketing",
+    link: "/service-details?search=interactive-content-marketing",
+  },
+  {
+    name: "Video Marketing",
+    link: "/service-details?search=video-marketing",
+  },
+  {
+    name: "Graphic Design",
+    link: "/service-details?search=graphic-designing",
+  },
+  {
+    name: "Video Design",
+    link: "/service-details?search=video-design",
+  },
+  {
+    name: "UI/UX Design",
+    link: "/service-details?search=ui-ux-design",
+  },
+];

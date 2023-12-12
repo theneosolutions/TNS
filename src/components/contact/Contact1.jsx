@@ -102,12 +102,7 @@ const Contact1 = () => {
                     </a>
                   </li>
                   <li>
-                    <span>
-                      {address.address}
-                      {/* Office No. 209, 2nd Floor, <br />
-                      GulMohar Trade Centre <br /> Gulberg 2 Main Market,
-                      (Lahore) */}
-                    </span>
+                    <span>{address.address}</span>
                   </li>
                 </ul>
               </div>
