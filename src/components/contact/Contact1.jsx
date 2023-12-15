@@ -102,7 +102,7 @@ const Contact1 = () => {
                     </a>
                   </li>
                   <li>
-                    <span>{address.address}</span>
+                    <span>{address?.address}</span>
                   </li>
                 </ul>
               </div>

@@ -24,11 +24,12 @@ export default function DigitalMarketing() {
           <DigitalMarketingBrand />
           <DigitalMarketingAbout />
           <DigitalMarketingService />
-          {/* <DigitalMarketingProtfolio /> */}
-          {/* <DigitalMarketingTestimonial /> */}
+
           <DigitalMarketingWorkflow />
           <DigitalMarketingPrice />
           <DigitalMarketingBlog />
+          {/* <DigitalMarketingProtfolio /> */}
+          {/* <DigitalMarketingTestimonial /> */}
         </RootLayout>
       </main>
     </div>

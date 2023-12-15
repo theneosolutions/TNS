@@ -5,8 +5,8 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "http",
-        hostname: "localhost",
-        port: "1337",
+        hostname: "backendstrapi.theneosolutions.com",
+        port: "",
         pathname: "/uploads/**",
       },
     ],
@@ -14,3 +14,5 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+// backendstrapi.theneosolutions.com

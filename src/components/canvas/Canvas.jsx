@@ -208,7 +208,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                   <a href="mailto:info@theneosolutions.com">{address?.email}</a>
                 </li>
                 <li>
-                  <span>{address.address}</span>
+                  <span>{address?.address}</span>
                 </li>
               </ul>
             </div>
