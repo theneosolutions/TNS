@@ -1,10 +1,16 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
-import Link from "next/link.js";
-import Blog31 from "../../../public/assets/imgs/blog/3/1.jpg";
-import Blog32 from "../../../public/assets/imgs/blog/3/2.jpg";
-import Image from "next/image.js";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const Blog31 = dynamic(() =>
+  import("../../../public/assets/imgs/blog/3/1.jpg")
+);
+const Blog32 = dynamic(() =>
+  import("../../../public/assets/imgs/blog/3/2.jpg")
+);
+const Image = dynamic(() => import("next/image"));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,6 +57,7 @@ const DigitalMarketingBlog = () => {
       return () => tHero.revert();
     }
   }, []);
+
   return (
     <>
       <section className="blog__area-3 pb-140 blog__animation">

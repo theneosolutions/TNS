@@ -26,8 +26,7 @@ const AboutHero = () => {
                     <div className="btn_wrapper">
                       <Link
                         href="/service"
-                        className="wc-btn-primary btn-hover btn-item"
-                      >
+                        className="wc-btn-primary btn-hover btn-item">
                         <span></span> Trends & <br />
                         technology
                         <i className="fa-solid fa-arrow-right"></i>

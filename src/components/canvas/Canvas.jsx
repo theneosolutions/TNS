@@ -118,7 +118,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
               <ul>
                 {links?.map((v, k) => {
                   return (
-                    <li>
+                    <li key={k}>
                       <a href={v.attributes.link}>{v.attributes.name}</a>
                     </li>
                   );
@@ -133,7 +133,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                 <ul className="menu-anim title" ref={headerTitle}>
                   <li>
                     <div className="header_title">
-                      <Link href={"/home"}>HOME</Link>
+                      <Link href={"/"}>HOME</Link>
                     </div>
                   </li>
                   <li>
@@ -159,7 +159,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                       }>
                       {array.map((v, k) => {
                         return (
-                          <li>
+                          <li key={k}>
                             <Link href={v.link}>{v.name}</Link>
                           </li>
                         );
@@ -197,7 +197,7 @@ const Canvas = ({ bladeMode = "", ofCanvasArea }) => {
                   <>
                     {address?.number.split(",")?.map((v, k) => {
                       return (
-                        <li>
+                        <li key={k}>
                           <a href="tel:+(2)578365379">{v}</a>
                         </li>
                       );

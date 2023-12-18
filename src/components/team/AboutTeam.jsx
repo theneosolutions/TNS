@@ -86,8 +86,7 @@ const AboutTeam = () => {
               1200: {
                 slidesPerView: 4,
               },
-            }}
-          >
+            }}>
             <SwiperSlide>
               <div className="team__slide">
                 <Link href="/team-details">

@@ -36,8 +36,7 @@ export default function NavItem({ nav, navStyle = "" }) {
           className={
             navStyle ? `main-menu-${navStyle} menu-anim` : `main-menu menu-anim`
           }
-          ref={menuAnim}
-        >
+          ref={menuAnim}>
           {nav.map((el, i) => {
             if (el.type === "megamenu") {
               return (

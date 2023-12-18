@@ -2,10 +2,12 @@ import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "@/plugins";
 import Link from "next/link";
-import Blog1 from "../../../public/assets/imgs/blog/1.jpg";
-import Blog2 from "../../../public/assets/imgs/blog/2.jpg";
-import Blog3 from "../../../public/assets/imgs/blog/3.jpg";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const Blog1 = dynamic(() => import("../../../public/assets/imgs/blog/1.jpg"));
+const Blog2 = dynamic(() => import("../../../public/assets/imgs/blog/2.jpg"));
+const Blog3 = dynamic(() => import("../../../public/assets/imgs/blog/3.jpg"));
+const Image = dynamic(() => import("next/image"));
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,6 +54,7 @@ const BlogRelated = () => {
       return () => tHero.revert();
     }
   }, []);
+
   return (
     <>
       <section className="blog__related blog__animation">
@@ -60,7 +63,7 @@ const BlogRelated = () => {
           <div className="row">
             <div className="col-xxl-12">
               <div className="sec-title-wrapper">
-                <h2 className="sec-title title-anim">Related Aricles</h2>
+                <h2 className="sec-title title-anim">Related Articles</h2>
               </div>
             </div>
           </div>
@@ -83,7 +86,7 @@ const BlogRelated = () => {
                         style={{ width: "auto", height: "auto" }}
                         className="image-box__item"
                         src={Blog1}
-                        alt="BLog Thumbnail"
+                        alt="Blog Thumbnail"
                       />
                     </div>
                   </Link>
@@ -94,8 +97,7 @@ const BlogRelated = () => {
                 <h5>
                   <Link
                     href="/blog-details"
-                    className="blog__title sub-title-anim"
-                  >
+                    className="blog__title sub-title-anim">
                     Ways of lying to yourself about your new relationship.
                   </Link>
                 </h5>
@@ -125,7 +127,7 @@ const BlogRelated = () => {
                         style={{ width: "auto", height: "auto" }}
                         className="image-box__item"
                         src={Blog2}
-                        alt="BLog Thumbnail"
+                        alt="Blog Thumbnail"
                       />
                     </div>
                   </Link>
@@ -136,9 +138,8 @@ const BlogRelated = () => {
                 <h5>
                   <Link
                     href="/blog-details"
-                    className="blog__title sub-title-anim"
-                  >
-                    How to manage a talented and successful de sign team
+                    className="blog__title sub-title-anim">
+                    How to manage a talented and successful design team
                   </Link>
                 </h5>
                 <Link href="/blog-details" className="blog__btn">
@@ -167,7 +168,7 @@ const BlogRelated = () => {
                         style={{ width: "auto", height: "auto" }}
                         className="image-box__item"
                         src={Blog3}
-                        alt="BLog Thumbnail"
+                        alt="Blog Thumbnail"
                       />
                     </div>
                   </Link>
@@ -178,8 +179,7 @@ const BlogRelated = () => {
                 <h5>
                   <Link
                     href="/blog-details"
-                    className="blog__title sub-title-anim"
-                  >
+                    className="blog__title sub-title-anim">
                     How to bring fold to your startup company with Axtra
                   </Link>
                 </h5>

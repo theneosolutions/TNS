@@ -25,14 +25,12 @@ const BlogDetails1 = () => {
               <div className="blog__detail-top">
                 <h2
                   className="blog__detail-date animation__word_come"
-                  ref={wordAnim}
-                >
+                  ref={wordAnim}>
                   Design, Marketing <span>25 Jan 2019</span>
                 </h2>
                 <h3
                   className="blog__detail-title animation__word_come"
-                  ref={wordAnim2}
-                >
+                  ref={wordAnim2}>
                   Donate your design for newest designers to try better
                 </h3>
                 <div className="blog__detail-metalist">

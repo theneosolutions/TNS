@@ -36,6 +36,7 @@ const ServiceDetailsFaq = ({ data }) => {
                     {data?.data?.section4?.list?.map((v, k) => {
                       return (
                         <Accordion.Item
+                          key={k}
                           eventKey={v?.eventKey}
                           className="accordion-item">
                           <Accordion.Header
@@ -59,5 +60,4 @@ const ServiceDetailsFaq = ({ data }) => {
     </>
   );
 };
-
 export default ServiceDetailsFaq;

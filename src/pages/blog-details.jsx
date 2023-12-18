@@ -1,8 +1,14 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import RootLayout from "@/components/common/layout/RootLayout";
-import BlogDetails1 from "@/components/blog/BlogDetails1";
-import BlogRelated from "@/components/blog/BlogRelated";
-import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
+
+const RootLayout = dynamic(() =>
+  import("@/components/common/layout/RootLayout")
+);
+const BlogDetails1 = dynamic(() => import("@/components/blog/BlogDetails1"));
+const BlogRelated = dynamic(() => import("@/components/blog/BlogRelated"));
+const DigitalAgencyCTA = dynamic(() =>
+  import("@/components/cta/DigitalAgencyCTA")
+);
 
 const BlogDetails = () => {
   return (

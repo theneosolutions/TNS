@@ -116,7 +116,9 @@ const DigitalMarketingService = () => {
                 <div className="service__list-3" ref={serviceList}>
                   {data?.map((v, k) => {
                     return (
-                      <div className="service__item-3 service_animation">
+                      <div
+                        key={k}
+                        className="service__item-3 service_animation">
                         <h3>
                           <Link
                             href="/service-details?search=mobile-app"
@@ -126,11 +128,6 @@ const DigitalMarketingService = () => {
                         </h3>
                         <div className="service__content-3">
                           <p>{v?.attributes?.discription}</p>
-                          {/* <ul className="">
-                          <li>+ Mobile App Development</li>
-                          <li>+ Website Development</li>
-                          <li>+ Software Development </li>
-                        </ul> */}
                         </div>
                         <div className="service__btn-3">
                           <div className="btn_wrapper">

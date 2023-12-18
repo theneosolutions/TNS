@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "@/plugins";
-import Link from "next/link.js";
+import Link from "next/link";
+import dynamic from "next/dynamic";
 import About31 from "../../../public/assets/imgs/about/3/1.jpg";
-import Image from "next/image.js";
+
+const Image = dynamic(() => import("next/image"));
 
 gsap.registerPlugin(ScrollSmoother);
 
@@ -23,6 +25,7 @@ const DigitalMarketingAbout = () => {
       return () => tHero.revert();
     }
   }, []);
+
   return (
     <>
       <section className="about__area-3">
@@ -45,19 +48,25 @@ const DigitalMarketingAbout = () => {
               <div className="sec-title-wrapper">
                 <h2 className="sec-sub-title title-anim">Who We Are</h2>
                 <h3 className="sec-title title-anim">
-                We design digital products that help grow businesses.
+                  We design digital products that help grow businesses.
                 </h3>
               </div>
               <div className="sec-text-wrapper">
                 <div className="sec-text text-anim">
                   <p>
-                  We’re committed to setting our clients apart from the competition. Our extensive range of expert services spans web development, branding, graphic design, SEO, social media marketing, and much more. We collaborate with businesses across the globe, across a diverse array of niches and industries. Neo Solutions stands as a brand firmly rooted in strong core values and strategic thinking, dedicated to propelling your business’s digital growth.
+                    We’re committed to setting our clients apart from the
+                    competition. Our extensive range of expert services spans
+                    web development, branding, graphic design, SEO, social media
+                    marketing, and much more. We collaborate with businesses
+                    across the globe, across a diverse array of niches and
+                    industries. Neo Solutions stands as a brand firmly rooted in
+                    strong core values and strategic thinking, dedicated to
+                    propelling your business’s digital growth.
                   </p>
                   <div className="btn_wrapper">
                     <Link
                       className="wc-btn-light btn-hover btn-item"
-                      href="/about"
-                    >
+                      href="/about">
                       <span></span> Explore Us{" "}
                       <i className="fa-solid fa-arrow-right"></i>
                     </Link>

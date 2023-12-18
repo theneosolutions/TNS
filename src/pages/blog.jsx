@@ -1,13 +1,19 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import RootLayout from "@/components/common/layout/RootLayout";
-import BlogElementV2 from "@/components/blog/BlogElementV2";
-import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
+
+const RootLayout = dynamic(() =>
+  import("@/components/common/layout/RootLayout")
+);
+const BlogElementV2 = dynamic(() => import("@/components/blog/BlogElementV2"));
+const DigitalAgencyCTA = dynamic(() =>
+  import("@/components/cta/DigitalAgencyCTA")
+);
 
 const BlogV2 = () => {
   return (
     <>
       <Head>
-        <title>Blog V2</title>
+        <title>Blogs</title>
         <meta name="description" content="Blog V2 Description" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

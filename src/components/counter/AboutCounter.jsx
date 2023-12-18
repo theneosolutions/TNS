@@ -96,7 +96,7 @@ const AboutCounter = () => {
                 <div className="counter__item-2 counter__anim">
                   <h2 className="counter__number count4">60</h2>
                   <p>
-                     <br />
+                    <br />
                     achievement
                   </p>
                   <span className="counter__border"></span>

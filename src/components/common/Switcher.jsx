@@ -60,8 +60,7 @@ const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
           <button
             id="switcher_close"
             ref={switcherClose}
-            onClick={closeSwitcher}
-          >
+            onClick={closeSwitcher}>
             <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
           </button>
         </div>
@@ -77,8 +76,7 @@ const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
                 name="cursor-style"
                 id="cursor_style"
                 ref={cursorStyle}
-                onChange={cursor}
-              >
+                onChange={cursor}>
                 <option value="1">default</option>
                 <option value="2">animated</option>
               </select>
@@ -92,14 +90,12 @@ const Switcher = ({ setMode, mode, cursor1, cursor2 }) => {
             <div className="switcher__btn mode-type wc-col-2">
               <button
                 onClick={() => modeChange("light")}
-                className={mode == "dark" ? "" : "active"}
-              >
+                className={mode == "dark" ? "" : "active"}>
                 light
               </button>
               <button
                 onClick={() => modeChange("dark")}
-                className={mode == "dark" ? "active" : ""}
-              >
+                className={mode == "dark" ? "active" : ""}>
                 dark
               </button>
             </div>

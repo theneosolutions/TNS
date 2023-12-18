@@ -75,7 +75,7 @@ const DigitalMarketingHero = () => {
             <div className="col-xxl-12">
               <div className="hero__inner-3">
                 <div className="sec-title-wrapper">
-                  <h2 className="sec-sub-title">The Neo  </h2>
+                  <h2 className="sec-sub-title">The Neo </h2>
                   <h3 className="sec-title title-left" ref={titleLeft}>
                     Solut
                   </h3>
@@ -85,7 +85,10 @@ const DigitalMarketingHero = () => {
                 </div>
                 <div className="hero__text-3">
                   <p className="hero__text-animation" ref={heroTextAnim}>
-                  At The Neo Solutions, our aim is to be the exclusive and ultimate agency for all your needs. Our cutting-edge services pave the way for success, offering tailored strategies and technological expertise.
+                    At The Neo Solutions, our aim is to be the exclusive and
+                    ultimate agency for all your needs. Our cutting-edge
+                    services pave the way for success, offering tailored
+                    strategies and technological expertise.
                   </p>
                 </div>
                 <div className="scroll-down">
@@ -103,7 +106,7 @@ const DigitalMarketingHero = () => {
           </div>
         </div>
         <div className="wrapper" ref={wrapper}>
-          <div className="video-info">
+          {/* <div className="video-info">
             <div className="video-intro">
               <input
                 id="video_check"
@@ -132,7 +135,7 @@ const DigitalMarketingHero = () => {
                 ></video>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="hero3-img-ani">

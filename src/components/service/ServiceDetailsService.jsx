@@ -1,7 +1,16 @@
-import ServiceDetail from "../../../public/assets/imgs/thumb/service-detail.png";
-import Shape6 from "../../../public/assets/imgs/icon/shape-6.png";
-import Image from "next/image";
-import ThumbDe2v3 from "../../../public/assets/imgs/about/3/1.jpg";
+import { useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
+
+// Dynamically import Image component
+const DynamicImage = dynamic(() => import("next/image"));
+
+// Dynamically import ServiceDetail and Shape6 images
+const DynamicServiceDetail = dynamic(() =>
+  import("../../../public/assets/imgs/thumb/service-detail.png")
+);
+const DynamicShape6 = dynamic(() =>
+  import("../../../public/assets/imgs/icon/shape-6.png")
+);
 
 const ServiceDetailsService = ({ data }) => {
   console.log("datadata", data?.data?.section3);
@@ -26,18 +35,18 @@ const ServiceDetailsService = ({ data }) => {
             </div>
             <div className="col-xxl-9 col-xl-9 col-lg-9 col-md-9">
               <div className="service__detail-img">
-                <Image
+                <DynamicImage
                   priority
                   width={960}
                   style={{ height: "auto" }}
-                  src={ServiceDetail}
+                  src={DynamicServiceDetail}
                   alt="Service detail image"
                 />
-                <Image
+                <DynamicImage
                   priority
                   width={51}
                   style={{ height: "auto" }}
-                  src={Shape6}
+                  src={DynamicShape6}
                   alt="Service shape image"
                   className="sd-shape"
                 />

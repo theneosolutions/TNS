@@ -1,10 +1,15 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import RootLayout from "@/components/common/layout/RootLayout";
-import ServiceHero from "@/components/hero/ServiceHero";
-import Service1 from "@/components/service/Service1";
-import ServiceBrand from "@/components/brand/ServiceBrand";
-import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
-import ServiceV6Hero from "@/components/hero/ServiceV6Hero";
+
+const RootLayout = dynamic(() =>
+  import("@/components/common/layout/RootLayout")
+);
+const Service1 = dynamic(() => import("@/components/service/Service1"));
+const ServiceBrand = dynamic(() => import("@/components/brand/ServiceBrand"));
+const DigitalAgencyCTA = dynamic(() =>
+  import("@/components/cta/DigitalAgencyCTA")
+);
+const ServiceV6Hero = dynamic(() => import("@/components/hero/ServiceV6Hero"));
 
 const Service = () => {
   return (

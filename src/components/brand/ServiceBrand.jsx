@@ -59,8 +59,7 @@ const ServiceBrand = () => {
       <section className="brand__area">
         <div
           className="container line pt-140 pb-100"
-          style={{ paddingBottom: "100px" }}
-        >
+          style={{ paddingBottom: "100px" }}>
           <span className="line-3"></span>
           <div className="row">
             <div className="col-xxl-12">

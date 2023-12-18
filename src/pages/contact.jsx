@@ -1,6 +1,10 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
-import RootLayout from "@/components/common/layout/RootLayout";
-import Contact1 from "@/components/contact/Contact1";
+
+const RootLayout = dynamic(() =>
+  import("@/components/common/layout/RootLayout")
+);
+const Contact1 = dynamic(() => import("@/components/contact/Contact1"));
 
 const Contact = () => {
   return (

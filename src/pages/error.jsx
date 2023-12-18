@@ -1,8 +1,11 @@
 import Head from "next/head";
-import RootLayout from "@/components/common/layout/RootLayout";
-import Error1 from "@/components/error/Error1";
+import dynamic from "next/dynamic"; // Import the dynamic function
 
 const Error = () => {
+  const DynamicRootLayout = dynamic(() =>
+    import("@/components/common/layout/RootLayout")
+  );
+
   return (
     <>
       <Head>
@@ -11,9 +14,7 @@ const Error = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main>
-        <RootLayout header="header3" footer="none">
-          <Error1 />
-        </RootLayout>
+        <DynamicRootLayout header="header3" footer="none"></DynamicRootLayout>
       </main>
     </>
   );

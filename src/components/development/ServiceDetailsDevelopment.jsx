@@ -1,6 +1,4 @@
 import { useEffect, useRef } from "react";
-import ThumbDev1 from "../../../public/assets/imgs/thumb/dev-1.jpg";
-import ThumbDev2 from "../../../public/assets/imgs/thumb/dev-2.jpg";
 import Image from "next/image";
 import animationCharCome from "@/lib/utils/animationCharCome";
 import ThumbDev23 from "../../../public/assets/imgs/about/3/1.jpg";

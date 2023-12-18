@@ -1,4 +1,7 @@
-import Link from "next/link";
+import dynamic from "next/dynamic";
+
+// Dynamically import Link component
+const DynamicLink = dynamic(() => import("next/link"));
 
 const DigitalAgencyCTA = ({ data }) => {
   return (
@@ -14,12 +17,12 @@ const DigitalAgencyCTA = ({ data }) => {
                   {data?.data?.section5?.heading}
                 </h2>
                 <div className="btn_wrapper">
-                  <Link
+                  <DynamicLink
                     href="/contact"
                     className="wc-btn-primary btn-hover btn-item">
                     <span></span>Let’s talk us{" "}
                     <i className="fa-solid fa-arrow-right"></i>
-                  </Link>
+                  </DynamicLink>
                 </div>
               </div>
             </div>

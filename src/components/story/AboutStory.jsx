@@ -23,7 +23,13 @@ const AboutStory = () => {
               <div className="col-xxl-7 col-xl-7 col-lg-7 col-md-7">
                 <div className="story__text">
                   <p>
-                  At Neo Solutions, we are dedicated to fostering innovation. In a rapidly evolving tech and digital landscape, staying competitive can be a formidable challenge for businesses. However, our commitment to constant evolution and our relentless pursuit of new avenues allows us to continuously explore and innovate, guiding businesses at every stage of their journey.
+                    At Neo Solutions, we are dedicated to fostering innovation.
+                    In a rapidly evolving tech and digital landscape, staying
+                    competitive can be a formidable challenge for businesses.
+                    However, our commitment to constant evolution and our
+                    relentless pursuit of new avenues allows us to continuously
+                    explore and innovate, guiding businesses at every stage of
+                    their journey.
                   </p>
                   <p>
                     ur specialized team of researchers, strategists, designers,

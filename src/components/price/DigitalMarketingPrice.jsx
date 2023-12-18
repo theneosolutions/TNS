@@ -189,8 +189,7 @@ const DigitalMarketingPrice = () => {
               <div className="price__btn btn_wrapper">
                 <Link
                   href="/contact"
-                  className="wc-btn-black btn-hover btn-item"
-                >
+                  className="wc-btn-black btn-hover btn-item">
                   <span></span> Try it <br />
                   Free Now <i className="fa-solid fa-arrow-right"></i>
                 </Link>

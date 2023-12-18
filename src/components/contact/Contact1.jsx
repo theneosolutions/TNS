@@ -88,7 +88,7 @@ const Contact1 = () => {
                     <>
                       {address?.number.split(",")?.map((v, k) => {
                         return (
-                          <li>
+                          <li key={k}>
                             <a href="tel:+(2)578365379">{v}</a>
                           </li>
                         );

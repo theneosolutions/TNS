@@ -174,7 +174,7 @@ export default function Footer1() {
               <ul>
                 {links?.map((v, k) => {
                   return (
-                    <li>
+                    <li key={k}>
                       <a href={v.attributes.link}>{v.attributes.name}</a>
                     </li>
                   );

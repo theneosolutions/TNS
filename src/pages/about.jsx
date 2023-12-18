@@ -1,12 +1,19 @@
-import DigitalAgencyBrand from "@/components/brand/DigitalAgencyBrand";
-import RootLayout from "@/components/common/layout/RootLayout";
-import AboutCounter from "@/components/counter/AboutCounter";
-import DigitalAgencyCTA from "@/components/cta/DigitalAgencyCTA";
-import AboutHero from "@/components/hero/AboutHero";
-import AboutStory from "@/components/story/AboutStory";
-import AboutTeam from "@/components/team/AboutTeam";
-import AboutTestimonial from "@/components/testimonial/AboutTestimonial";
+import dynamic from "next/dynamic";
 import Head from "next/head";
+
+// Import components using dynamic import
+const RootLayout = dynamic(() =>
+  import("@/components/common/layout/RootLayout")
+);
+const AboutHero = dynamic(() => import("@/components/hero/AboutHero"));
+const AboutStory = dynamic(() => import("@/components/story/AboutStory"));
+const AboutCounter = dynamic(() => import("@/components/counter/AboutCounter"));
+const DigitalAgencyBrand = dynamic(() =>
+  import("@/components/brand/DigitalAgencyBrand")
+);
+const DigitalAgencyCTA = dynamic(() =>
+  import("@/components/cta/DigitalAgencyCTA")
+);
 
 const About = () => {
   return (
