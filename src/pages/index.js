@@ -42,7 +42,7 @@ export default function DigitalMarketing() {
           <DigitalMarketingService />
           <DigitalMarketingWorkflow />
           <DigitalMarketingPrice />
-          <DigitalMarketingBlog />
+          {/* <DigitalMarketingBlog /> */}
         </RootLayout>
       </main>
     </div>

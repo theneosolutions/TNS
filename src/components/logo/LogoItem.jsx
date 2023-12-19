@@ -25,15 +25,17 @@ export default function LogoItem() {
   const Logo = () => {
     const imageUrl = logoData?.image?.data[0]?.attributes?.url;
 
-    const src = imageUrl ? `${URL}${imageUrl}` : DummyLogo;
+    const src = `${URL}${imageUrl}`;
 
-    return <Image width={150} height={50} src={src} alt="Logo" />;
+    return imageUrl && <Image width={150} height={70} src={src} alt="Logo" />;
   };
+  const imageUrl = logoData?.image?.data[0]?.attributes?.url;
 
+  console.log("helo my name is logo ", `${URL}${imageUrl} `);
   return (
     <>
       <div className="header__logo-2">
-        <Link href={"/digital-marketing"} className="logo-dark">
+        <Link href={"/"} className="logo-dark">
           <Logo />
         </Link>
       </div>

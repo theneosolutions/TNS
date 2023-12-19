@@ -157,7 +157,7 @@ export default function Footer1() {
     const src = imageUrl ? `${URL}${imageUrl}` : DummyLogo;
 
     return (
-      <Image priority height={30} width={90} src={src} alt="Footer Logo" />
+      <Image priority height={50} width={190} src={src} alt="Footer Logo" />
     );
   };
 

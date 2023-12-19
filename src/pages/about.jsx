@@ -8,6 +8,9 @@ const RootLayout = dynamic(() =>
 const AboutHero = dynamic(() => import("@/components/hero/AboutHero"));
 const AboutStory = dynamic(() => import("@/components/story/AboutStory"));
 const AboutCounter = dynamic(() => import("@/components/counter/AboutCounter"));
+const DigitalMarketingBrand = dynamic(() =>
+  import("@/components/brand/DigitalMarketingBrand")
+);
 const DigitalAgencyBrand = dynamic(() =>
   import("@/components/brand/DigitalAgencyBrand")
 );
@@ -28,7 +31,7 @@ const About = () => {
           <AboutHero />
           <AboutStory />
           <AboutCounter />
-          <DigitalAgencyBrand />
+          <DigitalMarketingBrand />
           <DigitalAgencyCTA />
         </RootLayout>
       </main>
