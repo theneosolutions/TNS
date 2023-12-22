@@ -39,9 +39,9 @@ export default function DigitalMarketing() {
           <DigitalMarketingHero />
           <DigitalMarketingBrand />
           <DigitalMarketingAbout />
-          <DigitalMarketingService />
+          {/* <DigitalMarketingService /> */}
           <DigitalMarketingWorkflow />
-          <DigitalMarketingPrice />
+          {/* <DigitalMarketingPrice /> */}
           {/* <DigitalMarketingBlog /> */}
         </RootLayout>
       </main>

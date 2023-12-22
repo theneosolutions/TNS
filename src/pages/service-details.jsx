@@ -48,7 +48,7 @@ const ServiceDetails = () => {
           {state && <ServiceDetailsWorkflow data={state} />}
           {state && <ServiceDetailsService data={state} />}
           {state && <ServiceDetailsFaq data={state} />}
-          {state && <DigitalAgencyCTA data={state} />}
+          
         </RootLayout>
       </main>
     </>

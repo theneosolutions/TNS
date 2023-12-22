@@ -10,7 +10,7 @@ export default function Document() {
         <link
           rel="icon"
           type="image/x-icon"
-          href="assets/imgs/logo/favicon.png"
+          href="assets/imgs/logo/fav.ico"
         />
       </Head>
       <body>

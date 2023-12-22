@@ -73,7 +73,7 @@ const DigitalMarketingBrand = () => {
 
     const src = imageUrl ? `${URL}${imageUrl}` : DummyLogo;
 
-    return <Image priority width={97} height={67} src={src} alt="Brand Logo" />;
+    return <Image priority width={97} height={97} src={src} alt="Brand Logo" />;
   };
   return (
     <>

@@ -30,9 +30,10 @@ const About = () => {
         <RootLayout header="header1" footer="footer1">
           <AboutHero />
           <AboutStory />
+          
           <AboutCounter />
-          <DigitalMarketingBrand />
-          <DigitalAgencyCTA />
+          {/* <DigitalMarketingBrand /> */}
+          {/* <DigitalAgencyCTA /> */}
         </RootLayout>
       </main>
     </div>

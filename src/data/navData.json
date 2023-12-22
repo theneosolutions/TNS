@@ -109,12 +109,7 @@
       ]
     },
     
-    {
-      "nav_name": "Blog",
-      "link": "/blog",
-      "type": "",
-      "sub_nav": []
-    },
+   
     {
       "nav_name": "Contact",
       "link": "/contact",

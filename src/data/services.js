@@ -38,6 +38,11 @@ const Data = [
           discription:
             "Our commitment extends beyond the development phase. We offer continuous support and maintenance services, ensuring your app remains up-to-date and performs optimally.",
         },
+        {
+          name: "Support & Maintenance",
+          discription:
+            "Our commitment extends beyond the development phase. We offer continuous support and maintenance services, ensuring your app remains up-to-date and performs optimally.",
+        },
       ],
       section3: {
         heading:

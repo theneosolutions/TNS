@@ -37,9 +37,9 @@ const DigitalMarketing = () => {
           <RootLayout header="header1" footer="footer1">
             <DigitalMarketingHero />
             <DigitalMarketingBrand />
-            <DigitalMarketingAbout />
-            <DigitalMarketingService />
-            <DigitalMarketingWorkflow />
+            {/* <DigitalMarketingAbout /> */}
+            {/* <DigitalMarketingService /> */}
+            {/* <DigitalMarketingWorkflow /> */}
             <DigitalMarketingPrice />
             <DigitalMarketingBlog />
           </RootLayout>
