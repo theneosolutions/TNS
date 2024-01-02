@@ -6,9 +6,9 @@ const Data = [
       name: "Mobile Development",
       section1: {
         content1:
-          "Welcome to The Neo Solutions: Your Gateway to Seamless Mobile Experiences At Neo Solutions, we are your trusted partner in crafting cutting-edge mobile applications that redefine user experiences.",
+          "Mobile applications have become an integral part of modern business strategies, providing a direct and personalized connection to your customers. At Neo Solutions, we excel in crafting bespoke mobile applications tailored to your unique goals. Ready to experience the future of mobile applications?",
         content2:
-          "Our expertise lies in leveraging the power of React Native for front-end development and Java or Node.js for robust backends, ensuring that your app stands out in today's dynamic digital landscape.",
+          "we are dedicated to delivering cutting-edge mobile applications that redefine user experiences and empower you to seamlessly connect, engage, and thrive in the digital world. Whether you're a business looking to enhance customer interactions or an individual seeking innovative solutions, our mobile app is crafted to meet your unique needs.",
         list: [
           "API Development",
           "Cloud Migration",
@@ -24,24 +24,24 @@ const Data = [
       },
       section2: [
         {
-          name: "Expertise",
+          name: "iOS App Development",
           discription:
-            "Our team comprises seasoned developers and designers with a proven track record in creating successful mobile applications.ess the power of Apple’s ecosystem with custom iOS apps designed to engage and delight your users.",
+            "Harness the power of Apple’s ecosystem with custom iOS apps designed to engage and delight your users.",
         },
         {
-          name: "Custom Solutions",
+          name: "Android App Development",
           discription:
-            "We understand that every project is unique. Our solutions are tailored to meet your specific business needs, ensuring a personalized and effective mobile app.",
+            "Reach a broader audience with Android apps that are both functional and visually appealing.",
         },
         {
-          name: "Support & Maintenance",
+          name: "Cross-Platform Development",
           discription:
-            "Our commitment extends beyond the development phase. We offer continuous support and maintenance services, ensuring your app remains up-to-date and performs optimally.",
+            "Save time and resources by developing apps that work seamlessly on both iOS and Android platforms",
         },
         {
-          name: "Support & Maintenance",
+          name: "Cross-Platform Compatibility",
           discription:
-            "Our commitment extends beyond the development phase. We offer continuous support and maintenance services, ensuring your app remains up-to-date and performs optimally.",
+            "Access the app from both iOS and Android devices.",
         },
       ],
       section3: {
@@ -481,16 +481,16 @@ const Data = [
       name: "Cyber Security",
       section1: {
         content1:
-          "Every decision we make needs to answer the million-dollar question: hozzzzzzzw will this benefit our partner’s goal best? We work to develop solutions",
+          "The Neo Solutions specializes in secure data and vulnerabilities within your infrastructure to fortify them against potential attacks. Our seasoned testers, certified by the industry, excel in evaluating network infrastructure, web applications, and mobile apps in accordance with widely recognized standards such as SANS, NIST, and CIS",
         content2:
-          "We like to be different, in the same way that every mission is different. Every project is an opportunity to create result that will help you",
+          "Our managed Security Operations Center (SOC) service delivers proactive security monitoring, threat intelligence, vulnerability management, Firewall Endpoint security, and Cloud security. It offers organizations a cost-efficient means of security practices to access all the advantages of an SOC without the associated expenses and administrative burden.",
         list: [
+          "Network Security",
+          "Cloud Security",
+          "Endpoint Protection",
+          "Vulnerability Assessment",
+          "Compliance and Regulation",
           "API Development",
-          "Cloud Migration",
-          "JavaScript",
-          "WordPress",
-          "Front End Development",
-          "Fluter Framework",
         ],
         largeImage: "../../../public/assets/imgs/about/3/1.jpg",
 
@@ -499,68 +499,110 @@ const Data = [
       },
       section2: [
         {
-          name: "Planning and sketching",
+          name: "Expert Team:",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            " Our team comprises seasoned cyber security professionals with a wealth of experience.",
         },
         {
-          name: "Team working",
+          name: "Innovation:",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Stay ahead of cyber threats with our commitment to adopting the latest security technologies.",
         },
         {
-          name: "Flowchart and wireframe",
+          name: "Client-Centric Approach",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Your unique needs guide our strategies to provide personalized solutions",
         },
         {
-          name: "User experience Testing",
+          name: "Reliability",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Count on us for round-the-clock monitoring and timely response to security incidents.",
         },
       ],
       section3: {
         heading:
-          "We replace unreliable wirefreme and expensive agencies for one of the best organized layer.",
+          "Say goodbye ",
         image: "",
         content1:
-          "Receive your design within a few business days, and be updated on the process. Everything you need for a digitally driven brand. Defined proposition. Conceptual realisation. Logo, type, look, feel, tone, movement, content - we've got it covered.",
+          "to unreliable wireframes and exorbitant agencies, and welcome the simplicity and efficiency of THE NEO SOLUTIONS!",
         content2:
-          "Getting your brand message out there. We create dynamic campaign creative that engages audiences, wherever they are most talented. Bring your brand to life, communicate your value proposition with agile setup across creativity.",
+          "In the ever-evolving landscape of cyberspace, your security is our priority. At NEO SOLUTIONS, we bring a comprehensive and proactive approach to protect your digital assets. Explore our range of cutting-edge cyber security services tailored to meet the demands of the modern digital era.",
       },
       section4: {
-        heading: "Product making for friendly users",
+        heading: "FAQ",
         image: "",
         list: [
           {
             eventKey: 1,
-            question: "Design should enrich our day",
+            question: "1.	What is Cyber Security?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Cyber Security refers to the practice of protecting computer systems, networks, and data from digital threats, including cyber attacks, unauthorized access, and data breaches.",
           },
           {
             eventKey: 2,
-            question: "Bring their individual experience and creative",
+            question: "2.	Why is Cyber Security Important for Businesses?",
             answer:
-              "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.",
+              "Cyber Security is crucial for safeguarding sensitive information, preventing financial losses, maintaining customer trust, and ensuring the continuity of business operations.",
           },
           {
             eventKey: 3,
-            question: "Human centred design to challenges",
+            question: "3.	What Services Does Our IT Security Agency Offer?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "We provide a range of Cyber Security services, including penetration testing, vulnerability assessments, threat detection, incident response, and security awareness training.",
           },
           {
             eventKey: 4,
-            question: "Design should enrich our day",
+            question: "4.	How Can I Assess My Company's Cyber Security Needs?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Our experts conduct comprehensive assessments to identify vulnerabilities, assess risks, and tailor Cyber Security solutions to your organization's specific needs.",
           },
           {
             eventKey: 5,
-            question: "Developing core web applications",
+            question: "5.	What is Penetration Testing, and Why Do I Need It?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Penetration testing simulates real-world cyber attacks to identify and address security weaknesses. It helps proactively strengthen your defenses and protect against potential threats.",
+          },
+          {
+            eventKey: 6,
+            question: "6.	How Does Cyber Security Compliance Impact My Business?",
+            answer:
+              "Penetration testing simulates real-world cyber attacks to identify and address security weaknesses. It helps proactively strengthen your defenses and protect against potential threats.",
+          },
+          {
+            eventKey: 7,
+            question: "7.	Do Small Businesses Need Robust Cyber Security Measures?",
+            answer:
+              "Penetration testing simulates real-world cyber attacks to identify and address security weaknesses. It helps proactively strengthen your defenses and protect against potential threats.",
+          },
+          {
+            eventKey: 8,
+            question: "8.	What Measures Can Employees Take to Enhance Cyber Security?",
+            answer:
+              "Employees play a crucial role. Training programs educate staff on recognizing phishing attempts, practicing secure password management, and following best practices for online security.",
+          },
+          {
+            eventKey: 9,
+            question: "9.	How Can I Respond to a Security Incident?",
+            answer:
+              "In the event of a security incident, our agency provides incident response services to help identify, contain, eradicate, and recover from the effects of a cyber attack.",
+          },
+          {
+            eventKey: 10,
+            question: "10.	Is Cloud Security Included in Your Services?",
+            answer:
+              "Yes, we offer comprehensive Cloud Security services to ensure that your data and applications hosted in the cloud are protected against cyber threats.",
+          },
+          {
+            eventKey: 11,
+            question: "11.	What Sets Our Cyber Security Solutions Apart?",
+            answer:
+              "Our tailored approach, cutting-edge technology, and proactive strategies set us apart. We focus on continuous improvement to adapt to evolving cyber threats.",
+          },
+          {
+            eventKey: 12,
+            question: "12.	How Can I Get Started with Your Cyber Security Services?",
+            answer:
+              "Contact us to schedule a consultation. Our team will assess your needs, provide insights into potential risks, and outline a customized Cyber Security plan for your organization.",
           },
         ],
       },
@@ -577,44 +619,23 @@ const Data = [
       name: "DevOps",
       section1: {
         content1:
-          "Every decision we make needs to answer the million-dollar question: hozzzzzzzw will this benefit our partner’s goal best? We work to develop solutions",
+          "We understand the transformative power of DevOps in the fast-paced world of technology. Our DevOps solutions are crafted to enhance collaboration, automate workflows, and drive efficiency across your software development and IT operations.",
         content2:
-          "We like to be different, in the same way that every mission is different. Every project is an opportunity to create result that will help you",
+          "Our DevOps toolchain comprises cutting-edge tools that empower your teams to deliver software faster and with higher quality. From code repositories to deployment automation, we've got you covered.",
         list: [
-          "API Development",
-          "Cloud Migration",
-          "JavaScript",
-          "WordPress",
-          "Front End Development",
-          "Fluter Framework",
+          "Version Control",
+          "Build and Integration",
+          "Containerization and Orchestration",
+          "Configuration Management",
+          "Collaboration and Communication",
+          "Monitoring and Logging",
         ],
         largeImage: "../../../public/assets/imgs/about/3/1.jpg",
 
         // largeImage: "../public/assets/imgs/about/3/1.jpg",
         smallImage: "",
       },
-      section2: [
-        {
-          name: "Planning and sketching",
-          discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
-        },
-        {
-          name: "Team working",
-          discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
-        },
-        {
-          name: "Flowchart and wireframe",
-          discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
-        },
-        {
-          name: "User experience Testing",
-          discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
-        },
-      ],
+      
       section3: {
         heading:
           "We replace unreliable wirefreme and expensive agencies for one of the best organized layer.",
@@ -625,39 +646,82 @@ const Data = [
           "Getting your brand message out there. We create dynamic campaign creative that engages audiences, wherever they are most talented. Bring your brand to life, communicate your value proposition with agile setup across creativity.",
       },
       section4: {
-        heading: "Product making for friendly users",
+        heading: "FAQ",
         image: "",
         list: [
           {
             eventKey: 1,
-            question: "Design should enrich our day",
+            question: "1.	What is DevOps?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "DevOps is a set of practices that combines software development (Dev) and IT operations (Ops), aiming to shorten the systems development life cycle and deliver high-quality software continuously.",
           },
           {
             eventKey: 2,
-            question: "Bring their individual experience and creative",
+            question: "2.	Why is DevOps Important?",
             answer:
-              "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.",
+              "DevOps fosters collaboration, automation, and efficiency, leading to faster development cycles, improved deployment frequency, and enhanced overall software quality.",
           },
           {
             eventKey: 3,
-            question: "Human centred design to challenges",
+            question: "3.	What Are the Core Principles of DevOps?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "The core principles of DevOps include collaboration and communication, automation of processes, continuous integration, continuous delivery, and continuous monitoring.",
           },
           {
             eventKey: 4,
-            question: "Design should enrich our day",
+            question: "4.	How Does DevOps Improve Collaboration Between Teams?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "DevOps breaks down silos between development and operations teams, encouraging shared responsibilities, transparent communication, and a unified focus on delivering value to end-users.",
           },
           {
             eventKey: 5,
-            question: "Developing core web applications",
+            question: "5.	What Are the Key Components of a DevOps Toolchain?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "A DevOps toolchain comprises various tools for coding, building, testing, packaging, releasing, configuring, and monitoring. Common tools include Jenkins, Docker, Kubernetes, and Ansible.",
           },
+          {
+            eventKey: 6,
+            question: "6.	How Does DevOps Support Continuous Integration and Continuous Delivery (CI/CD)?",
+            answer:
+              "DevOps emphasizes CI/CD practices to automate the integration, testing, and delivery of code changes. This results in faster and more reliable software releases.",
+          },
+          {
+            eventKey: 7,
+            question: "7.	Can DevOps be Implemented in Any Organization?",
+            answer:
+              "Yes, DevOps principles are adaptable and can be implemented in organizations of any size or industry, promoting agility, collaboration, and innovation.",
+          },
+          {
+            eventKey: 8,
+            question: "8.	What Are the Benefits of Implementing DevOps?",
+            answer:
+              "A DevOps toolchain comprises various tools for coding, building, testing, packaging, releasing, configuring, and monitoring. Common tools include Jenkins, Docker, Kubernetes, and Ansible.",
+          },
+          {
+            eventKey: 9,
+            question: "9.	Is DevOps Only for Software Development?",
+            answer:
+              "While DevOps originated in software development, its principles can be applied to various domains, including infrastructure management, data science, and more.",
+          },
+          {
+            eventKey: 10,
+            question: "10.	How Does DevOps Address Security Concerns?",
+            answer:
+              "DevOps includes practices like DevSecOps, integrating security measures throughout the development process. This ensures that security is not an afterthought but an integral part of the workflow.",
+          },
+          {
+            eventKey: 11,
+            question: "11.	What Challenges Are Associated with DevOps Implementation?",
+            answer:
+              "Common challenges include resistance to change, cultural barriers, and selecting the right tools. Effective leadership, communication, and gradual implementation can help overcome these challenges.",
+          },
+          {
+            eventKey: 12,
+            question: "12.	How Can an Organization Start Implementing DevOps?",
+            answer:
+              "Organizations can start by fostering a DevOps culture, implementing automation, and gradually adopting CI/CD practices. Collaboration and learning from continuous feedback are essential.",
+          },
+
         ],
       },
       section5: {
@@ -1443,87 +1507,66 @@ const Data = [
       name: "Graphic Design",
       section1: {
         content1:
-          "Every decision we make needs to answer the million-dollar question: hozzzzzzzw will this benefit our partner’s goal best? We work to develop solutions",
+          "Our dynamic design team possesses the expertise and cutting-edge tools required to captivate your audience across all graphic elements. In today's fast-paced digital landscape, where users are consistently online and occupied.",
         content2:
-          "We like to be different, in the same way that every mission is different. Every project is an opportunity to create result that will help you",
+          "Our approach includes creating designs from the ground up and revitalizing existing branding materials through imaginative ideation, ultimately delivering finalized designs with precision and speed.",
         list: [
-          "API Development",
-          "Cloud Migration",
-          "JavaScript",
-          "WordPress",
-          "Front End Development",
-          "Fluter Framework",
+          "Branding",
+          "Web Designing",
+          "Digtal Marketing assets",
+          "Video Animation",
+          
         ],
         largeImage: "../../../public/assets/imgs/about/3/1.jpg",
 
         // largeImage: "../public/assets/imgs/about/3/1.jpg",
         smallImage: "",
       },
-      section2: [
-        {
-          name: "Planning and sketching",
-          discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
-        },
-        {
-          name: "Team working",
-          discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
-        },
-        {
-          name: "Flowchart and wireframe",
-          discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
-        },
-        {
-          name: "User experience Testing",
-          discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
-        },
-      ],
-      section3: {
-        heading:
-          "We replace unreliable wirefreme and expensive agencies for one of the best organized layer.",
-        image: "",
-        content1:
-          "Receive your design within a few business days, and be updated on the process. Everything you need for a digitally driven brand. Defined proposition. Conceptual realisation. Logo, type, look, feel, tone, movement, content - we've got it covered.",
-        content2:
-          "Getting your brand message out there. We create dynamic campaign creative that engages audiences, wherever they are most talented. Bring your brand to life, communicate your value proposition with agile setup across creativity.",
-      },
+      
+      // section3: {
+      //   heading:
+      //     "We replace unreliable wirefreme and expensive agencies for one of the best organized layer.",
+      //   image: "",
+      //   content1:
+      //     "Receive your design within a few business days, and be updated on the process. Everything you need for a digitally driven brand. Defined proposition. Conceptual realisation. Logo, type, look, feel, tone, movement, content - we've got it covered.",
+      //   content2:
+      //     "Getting your brand message out there. We create dynamic campaign creative that engages audiences, wherever they are most talented. Bring your brand to life, communicate your value proposition with agile setup across creativity.",
+      // },
       section4: {
-        heading: "Product making for friendly users",
+        heading: "FAQ",
         image: "",
         list: [
           {
             eventKey: 1,
-            question: "Design should enrich our day",
+            question: "1. What services does your graphic design agency offer?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Graphic design for branding, logos, print materials, web design, digital marketing assets, video animations, video  etc.",
           },
           {
             eventKey: 2,
-            question: "Bring their individual experience and creative",
+            question: "2. What industries do you specialize in?",
             answer:
-              "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.",
+              "Our expertise spans across various industries, including IT, real estate, Fashion, Education, Retail etc. ",
           },
           {
             eventKey: 3,
-            question: "Human centred design to challenges",
+            question: "How experienced is your team",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Our team comprises experienced professionals with expertise in diverse design disciplines.",
           },
           {
             eventKey: 4,
-            question: "Design should enrich our day",
+            question: "4. What is the typical timeline for a design project?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Timelines vary based on the project scope. We aim for efficient turnarounds without compromising quality.",
           },
           {
             eventKey: 5,
-            question: "Developing core web applications",
+            question: ". What is your design process like?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "We follow a collaborative process, starting with client input, ideation, design drafts, revisions, and finalization.",
           },
+          
         ],
       },
       section5: {
@@ -1539,17 +1582,10 @@ const Data = [
       name: "Video Design",
       section1: {
         content1:
-          "Every decision we make needs to answer the million-dollar question: hozzzzzzzw will this benefit our partner’s goal best? We work to develop solutions",
+          "Whether you're looking to engage your audience with animated explainer videos, showcase your product through captivating visuals, or enhance your brand's storytelling, our team of skilled video designers is here to transform your ideas into reality.",
         content2:
-          "We like to be different, in the same way that every mission is different. Every project is an opportunity to create result that will help you",
-        list: [
-          "API Development",
-          "Cloud Migration",
-          "JavaScript",
-          "WordPress",
-          "Front End Development",
-          "Fluter Framework",
-        ],
+          "We Infuse energy into your content with captivating motion graphics that seamlessly blend animation, text, and imagery.",
+        
         largeImage: "../../../public/assets/imgs/about/3/1.jpg",
 
         // largeImage: "../public/assets/imgs/about/3/1.jpg",
@@ -1557,71 +1593,27 @@ const Data = [
       },
       section2: [
         {
-          name: "Planning and sketching",
+          name: "Concept Development",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Our team collaborates to develop a concept that aligns with your vision, ensuring that the video effectively communicates your intended message.",
         },
         {
-          name: "Team working",
+          name: "Storyboarding",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Visualization is key. We create a detailed storyboard to outline the sequence of scenes, transitions, and key elements of your video.",
         },
         {
-          name: "Flowchart and wireframe",
+          name: "Animation Production",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Our skilled animators bring the storyboard to life, using cutting-edge tools and techniques to craft animations that captivate and resonate with your audience.",
         },
         {
-          name: "User experience Testing",
+          name: "Post-Production",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "The final touches are added during post-production, including editing, sound design, and any necessary enhancements to ensure a polished and professional result",
         },
       ],
-      section3: {
-        heading:
-          "We replace unreliable wirefreme and expensive agencies for one of the best organized layer.",
-        image: "",
-        content1:
-          "Receive your design within a few business days, and be updated on the process. Everything you need for a digitally driven brand. Defined proposition. Conceptual realisation. Logo, type, look, feel, tone, movement, content - we've got it covered.",
-        content2:
-          "Getting your brand message out there. We create dynamic campaign creative that engages audiences, wherever they are most talented. Bring your brand to life, communicate your value proposition with agile setup across creativity.",
-      },
-      section4: {
-        heading: "Product making for friendly users",
-        image: "",
-        list: [
-          {
-            eventKey: 1,
-            question: "Design should enrich our day",
-            answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
-          },
-          {
-            eventKey: 2,
-            question: "Bring their individual experience and creative",
-            answer:
-              "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.",
-          },
-          {
-            eventKey: 3,
-            question: "Human centred design to challenges",
-            answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
-          },
-          {
-            eventKey: 4,
-            question: "Design should enrich our day",
-            answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
-          },
-          {
-            eventKey: 5,
-            question: "Developing core web applications",
-            answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
-          },
-        ],
-      },
+      
       section5: {
         text: "WORK WITH US",
         heading: "We would love to hear more about your project",
@@ -1635,17 +1627,10 @@ const Data = [
       name: "UI/UX Design",
       section1: {
         content1:
-          "Every decision we make needs to answer the million-dollar question: hozzzzzzzw will this benefit our partner’s goal best? We work to develop solutions",
+          "Welcome to our UI/UX Design Services, where seamless user experiences and visually stunning interfaces come together to redefine digital engagement. Whether you're launching a new website, app, or software, our UI/UX design experts are here to ensure your digital presence is not just functional but exceptional.",
         content2:
-          "We like to be different, in the same way that every mission is different. Every project is an opportunity to create result that will help you",
-        list: [
-          "API Development",
-          "Cloud Migration",
-          "JavaScript",
-          "WordPress",
-          "Front End Development",
-          "Fluter Framework",
-        ],
+          "we believe in the power of design to elevate digital experiences and transform the way users interact with your brand. Our UI/UX design services are crafted to deliver seamless, intuitive, and visually stunning interfaces that captivate audiences and drive meaningful engagement.",
+        
         largeImage: "../../../public/assets/imgs/about/3/1.jpg",
 
         // largeImage: "../public/assets/imgs/about/3/1.jpg",
@@ -1653,69 +1638,76 @@ const Data = [
       },
       section2: [
         {
-          name: "Planning and sketching",
+          name: "•	User Research and Analysis",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Understanding your audience's needs and expectations.",
         },
         {
-          name: "Team working",
+          name: "•	Wireframing and Prototyping",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Translating ideas into tangible, interactive representations.",
         },
         {
-          name: "Flowchart and wireframe",
+          name: "•	Visual Design",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Creating visually appealing interfaces aligned with your brand identity.",
         },
         {
-          name: "User experience Testing",
+          name: "•	User Testing",
           discription:
-            "Modern and unique design practically point of view, it risks not meeting the huge expectations",
+            "Gathering insights through testing to refine and optimize designs.",
         },
       ],
-      section3: {
-        heading:
-          "We replace unreliable wirefreme and expensive agencies for one of the best organized layer.",
-        image: "",
-        content1:
-          "Receive your design within a few business days, and be updated on the process. Everything you need for a digitally driven brand. Defined proposition. Conceptual realisation. Logo, type, look, feel, tone, movement, content - we've got it covered.",
-        content2:
-          "Getting your brand message out there. We create dynamic campaign creative that engages audiences, wherever they are most talented. Bring your brand to life, communicate your value proposition with agile setup across creativity.",
-      },
+      // section3: {
+      //   heading:
+      //     "We replace unreliable wirefreme and expensive agencies for one of the best organized layer.",
+      //   image: "",
+      //   content1:
+      //     "Receive your design within a few business days, and be updated on the process. Everything you need for a digitally driven brand. Defined proposition. Conceptual realisation. Logo, type, look, feel, tone, movement, content - we've got it covered.",
+      //   content2:
+      //     "Getting your brand message out there. We create dynamic campaign creative that engages audiences, wherever they are most talented. Bring your brand to life, communicate your value proposition with agile setup across creativity.",
+      // },
       section4: {
-        heading: "Product making for friendly users",
+        heading: "FAQ",
         image: "",
         list: [
           {
             eventKey: 1,
-            question: "Design should enrich our day",
+            question: "How do you approach UI/UX Design projects?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Our approach is collaborative and user-centric. We start with in-depth research and user analysis, followed by wireframing and prototyping. Continuous testing and feedback loops ensure the final design meets both business goals and user expectations.",
           },
           {
             eventKey: 2,
-            question: "Bring their individual experience and creative",
+            question: "What industries do you cater to with your UI/UX Design Services?",
             answer:
-              "This is the second item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables.",
+              "We cater to a diverse range of industries, including but not limited to technology, e-commerce, healthcare, finance, and education. Our adaptable design approach ensures solutions tailored to your specific industry needs.",
           },
           {
             eventKey: 3,
-            question: "Human centred design to challenges",
+            question: "Can you redesign an existing website or app for better UI/UX?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Absolutely. Our UI/UX redesign services are designed to breathe new life into existing digital assets. We analyze user feedback, identify pain points, and implement design enhancements to optimize user experiences.",
           },
           {
             eventKey: 4,
-            question: "Design should enrich our day",
+            question: "How do you ensure mobile responsiveness in UI/UX Design?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Mobile responsiveness is a core consideration in our design process. We prioritize a responsive design approach, ensuring that the user experience is consistent and enjoyable across various devices, including smartphones and tablets.",
           },
           {
             eventKey: 5,
-            question: "Developing core web applications",
+            question: "What tools and technologies do you use for UI/UX Design?",
             answer:
-              "Our design services starts and ends with a best-in-class experience strategy that builds brands. Through a process of iteration and prototyping design interfaces that bring joy to people",
+              "Our designers are proficient in industry-standard tools such as Sketch, Figma, Adobe XD, and InVision. We stay updated with the latest design trends and technologies to deliver cutting-edge solutions.",
           },
+          {
+            eventKey: 6,
+            question: "How long does a typical UI/UX Design project take?",
+            answer:
+              "The timeline varies based on the complexity and scope of the project. We provide estimated timelines during the initial consultation, ensuring transparency and alignment with your project goals.",
+          },
+          
         ],
       },
       section5: {
